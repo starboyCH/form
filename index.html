@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+		<title>PIV</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<h1>PIV Ingeniería de Sistemas 4to Semestre</h1>
+		<form>
+			<div class="input-area">
+				<input type="text" class="name" id="student-name" placeholder="Nombre y Apellido" required>
+				<input type="email" class="email" id="student-mail"placeholder="Correo" required>
+				<select id="subjects" required>
+					<option value="" selected disabled>Selecciona una materia</option>
+					<option value="coding">Programación</option>
+					<option value="production-systems">Sistemas de Producción</option>
+					<option value="calculus">Cálculo Numérico</option>
+					<option value="physical-education">Educación Física y Deporte</option>
+					<option value="systems-theory">Teoría de Sistemas</option>
+					<option value="mathematics-logic">Lógica Matemática</option>
+					<option value="defense-IV">Defensa Integral de la Nación IV</option>	
+				</select>
+			</div>		
+			<input type="submit" class="submit" value="Inscribir asignatura">
+		</form>
+	</body>
+</html>

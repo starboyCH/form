@@ -1,0 +1,91 @@
+:root{
+	color-scheme: light dark;
+	--bg-color: light-dark(#DEDEE2E0, #141418);
+	--form-color: light-dark(#24242830, #CECED230);
+	--button-color: light-dark(#192265, #192265);
+	--light-color: #DEDEE2;
+	--dark-color: #141418;
+	--top-shadow-color: light-dark(#EEEEF266, #DEDEE210);
+	--bottom-shadow-color: light-dark(#24242877, #040408);
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	min-height: 100dvh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: var(--bg-color);
+	font-family: Montserrat, sans-serif;
+	padding: 20px;
+	background-image: linear-gradient(135deg, #030720, #A9B2F5), url("unefa.png");
+	background-repeat: no-repeat;
+	background-size: cover, 40%;
+	background-position: center;
+	background-blend-mode: overlay;
+}
+h1{
+	font-size: clamp(18px, 5vw, 36px);
+	text-align: center;
+	color: var(--dark-color);
+}
+form{
+	width: clamp(280px, 70vw, 400px);
+	height: clamp(220px, 50vw, 300px);
+	padding: 10px 20px;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	gap: 4vw;
+}
+.input-area{
+	background-color: var(--form-color);
+	border-radius: 4px;
+	backdrop-filter: blur(8px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	box-shadow: inset 2px 2px 4px var(--top-shadow-color), 2px 2px 5px var(--bottom-shadow-color);
+}
+input, select{
+	padding: 5px;
+	border-radius: 3px;
+	border: none;
+	outline: none;
+	font-family: Montserrat, sans-serif;
+	font-weight: 600;
+	background-color: var(--light-color);
+	color: var(--dark-color);
+}
+select, .input-area input{
+	width: 90%;
+}
+select{
+	font-weight: 500;
+}
+.submit{
+	background-color: var(--button-color);
+	color: var(--light-color);
+	width: 60%;
+	margin: auto;
+	box-shadow: 0 0 10px var(--bottom-shadow-color);
+	cursor: pointer;
+}
+@media (prefers-color-scheme: dark){
+	h1{
+		color: var(--light-color);
+	}
+	body{
+		background-image: linear-gradient(135deg, #03072066, #A9B2F566), url("unefa.png");
+	}
+}
+@media (min-width: 720px){
+	body{
+		background-size: cover, 22%;
+	}
+}
